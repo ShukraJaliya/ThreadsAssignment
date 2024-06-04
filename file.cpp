@@ -44,14 +44,14 @@ void* threadFunction(void* arg) {
     }
 
     double average = sum / count;
-    std::cout << "Thread " << thread_id << " average: " << average << std::endl;
+    std::cout << "Thread " << thread_id << " avg: " << average << std::endl;
 
     infile.close();
     outfile.close();
 
     double end_time = Time_GetSeconds();
     data->execution_time = (end_time - start_time) * 1000; // convert to milliseconds
-    std::cout << "Thread " << thread_id << " execution time: " << data->execution_time << " ms" << std::endl;
+    std::cout << "Thread " << thread_id << " exetime: " << data->execution_time << " milli sec" << std::endl;
 
     pthread_exit(NULL);
 }
@@ -95,7 +95,7 @@ int main() {
     double main_end_time = Time_GetSeconds();
     double main_execution_time = (main_end_time - main_start_time) * 1000; // convert to milliseconds
 
-    std::cout << "Total execution time: " << main_execution_time << " ms" << std::endl;
+    std::cout << "Total execution time: " << main_execution_time << " milli sec" << std::endl;
 
     return 0;
 }
