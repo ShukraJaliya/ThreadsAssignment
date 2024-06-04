@@ -2,7 +2,7 @@
 #include <fstream>
 #include <vector>
 #include <random>
-#include <pthread.h>
+#include "my_threads.h"
 #include <sys/time.h>
 #include <assert.h>
 
